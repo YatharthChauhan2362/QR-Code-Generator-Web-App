@@ -1,10 +1,11 @@
-
-
-import tkinter as tk
-import pyqrcode
 import png
+import pyqrcode
+import tkinter as tk
+from flask import Flask
+app = Flask(__name__)
 
 
+@app.route("/")
 def generate_qr_code():
     # Get the URL from the user input
     url = user_input.get()
